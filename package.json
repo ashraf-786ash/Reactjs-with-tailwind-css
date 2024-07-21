@@ -38,5 +38,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.6"
-  }
+  },
+  "proxy": "https://api.rawg.io"
 }

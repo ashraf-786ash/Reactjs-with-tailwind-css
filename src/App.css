@@ -23,6 +23,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+/* Ensure you have this or add this to your CSS file */
+input[type="text"] {
+  color: black; /* Change text color to black or any other preferred color */
+}
+
+/* Additional styling to improve visibility */
+input[type="text"]::placeholder {
+  color: #ccc; /* Adjust placeholder color if needed */
+}
+
 
 .App-link {
   color: #61dafb;

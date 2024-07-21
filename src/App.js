@@ -9,7 +9,7 @@ import Favourites from './pages/favourites';
 function App() {
   return (
     <div>
-      <div className='min-h-screen p-6 bg-black text-gray-200 text-lg'>
+      <div className='min-h-screen p-6 bg-white text-black-200 text-lg'>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
