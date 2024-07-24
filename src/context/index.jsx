@@ -6,6 +6,8 @@ export default function GlobalState({ children }) {
   const [searchParam, setSearchParam] = useState("");
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
+  const [gameDetailsData, setGameDetailsData] = useState(null);
+  const [FavouritesList, setFavouritesList] = useState([]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -31,11 +33,18 @@ export default function GlobalState({ children }) {
     }
   }
 
+  function handleAddFavourite(gameDetails) {
+    console.log("Added to cart:", gameDetails);
+    // Display the game details or handle the addition to the cart
+    setFavouritesList([...FavouritesList, gameDetails]);
+     // Add the game details to the favorites list
+  }
+
   console.log(loading, recipeList); // Log loading state and recipeList
 
   return (
     <GlobalContext.Provider 
-      value={{ searchParam, loading, recipeList, setSearchParam, handleSubmit }}>
+      value={{ searchParam, loading, recipeList, setSearchParam, handleSubmit, gameDetailsData, setGameDetailsData, handleAddFavourite, FavouritesList }}>
       {children}
     </GlobalContext.Provider>
   );
